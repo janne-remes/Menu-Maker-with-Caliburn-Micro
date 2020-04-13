@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using MenuMaker_CaliburnMicro.Models;
+using System.Windows.Controls;
 
 namespace MenuMaker_CaliburnMicro.ViewModels
 {
@@ -91,6 +92,14 @@ namespace MenuMaker_CaliburnMicro.ViewModels
                 _selectedDish = value;
                 NotifyOfPropertyChange(() => SelectedDish);
             }
+        }
+
+        public void InsertDish(string insertName, string insertDescription)
+        {
+            //decimal strintToDecimal = decimal.Parse(insertPrice);
+            Dishes.Add(new DishModel { DishName = insertName, DishDescription = insertDescription, DishPrice = 0});
+            //NotifyOfPropertyChange(() => DishName);
+            //NotifyOfPropertyChange(() => DishDescription);
         }
 
         public void LoadDishView()

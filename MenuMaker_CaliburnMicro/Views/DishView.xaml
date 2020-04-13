@@ -19,27 +19,97 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
+            
+            <!-- ROW 2 -->
             <RowDefinition Height="auto" />
+
+            <!-- ROW 3 -->
             <RowDefinition Height="auto" />
+
+            <!-- ROW 4 -->
             <RowDefinition Height="auto" />
+
+            <!-- ROW 5 -->
+            <RowDefinition Height="auto" />
+
+            <!-- ROW 6 -->
+            <RowDefinition Height="auto" />
+
+            <!-- ROW 7 -->
+            <RowDefinition Height="auto" />
+
+            <!-- ROW 8 -->
+            <RowDefinition Height="auto" />
+
+            <!-- ROW 9 -->
+            <RowDefinition Height="auto" />
+
+            <!-- ROW 10 -->
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <!-- ROW 1 -->
-        <TextBlock Grid.Row="2" Grid.Column="2" Text="ATERIA:" />
         <!-- ROW 2 -->
-        <ComboBox x:Name="Dishes" Grid.Row="3" Grid.Column="2"
-                  SelectedItem="{Binding Path=SelectedDish, Mode=OneWayToSource}"
-                  DisplayMemberPath="DishName" />
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="ATERIA:"
+                   Padding="5" />
         
-        <TextBlock Grid.Row="3" Grid.Column="3"
-                   x:Name="SelectedDish_DishDescription"
-                   Padding="5"/>
+        <ComboBox x:Name="Dishes" Grid.Row="2" Grid.Column="3"
+                  SelectedItem="{Binding Path=SelectedDish, Mode=OneWayToSource}"
+                  DisplayMemberPath="DishName"/>
         <!-- ROW 3 -->
-        <TextBlock Grid.Row="4" Grid.Column="3"
-                   x:Name="SelectedDish_DishPrice"
+        <TextBlock Grid.Row="3" Grid.Column="2"
+                   x:Name="SelectedDish_DishName"
+                   Grid.ColumnSpan="6"
+                   Typography.Capitals="AllSmallCaps"
+                   FontSize="18"
                    Padding="5"/>
+        <!-- ROW 4 -->
+        <TextBlock Grid.Row="4" Grid.Column="2"
+                   x:Name="SelectedDish_DishDescription"
+                   Grid.ColumnSpan="6"
+                   Padding="5"/>
+        <!-- ROW 5 -->
+        <TextBlock Grid.Row="5" Grid.Column="2"
+                   x:Name="SelectedDish_DishPrice"
+                   Grid.ColumnSpan="6"
+                   Padding="5"/>
+        <!-- ROW 6 -->
+        <TextBlock Grid.Row="6" Grid.Column="2" Text="Lisää annos:"
+                   Foreground="Red"
+                   FontWeight="Bold"
+                   Padding="5 10"/>
+        <!-- ROW 7 -->
+        <TextBlock Grid.Row="7" Grid.Column="2"
+                   Text="Aterian nimi:"
+                   Padding="5"/>
+        <TextBox Grid.Row="7" Grid.Column="3"
+                 Width="200"
+                 Padding="5"
+                 x:Name="insertName"
+                 />
+        <!-- ROW 8 -->
+        <TextBlock Grid.Row="8" Grid.Column="2"
+                   Text="Aterian kuvaus:"
+                   Padding="5"/>
+        <TextBox Grid.Row="8" Grid.Column="3"
+                 Width="200"
+                 Padding="5"
+                 x:Name="insertDescription"
+                 />
+        <!-- ROW 9-->
+        <TextBlock Grid.Row="9" Grid.Column="2"
+                   Text="Aterian hinta:"
+                   Padding="5"/>
+        <TextBox Grid.Row="9" Grid.Column="3"
+                 Width="200"
+                 Padding="5"/>
+        <!-- ROW 10 -->
+        <Button Grid.Row="10" Grid.Column="2"
+            Grid.ColumnSpan="2"
+                Margin="0 10 0 0"
+                x:Name="InsertDish">
+            LISÄÄ
+        </Button>
     </Grid>
 </UserControl>
