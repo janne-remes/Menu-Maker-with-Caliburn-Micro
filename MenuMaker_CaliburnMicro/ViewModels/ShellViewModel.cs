@@ -23,6 +23,8 @@ namespace MenuMaker_CaliburnMicro.ViewModels
         {
             Dishes.Add(new DishModel { DishName = "Lihapullat perunamuusilla", DishDescription = "Mummon reseptillä lihapullat ruskeassa kastikkeessa, perunamuusia ja puolukkahilloa", DishPrice = 5.35 });
             Dishes.Add(new DishModel { DishName = "Kalakukkoa", DishDescription = "Savon perinneherkkua", DishPrice = 4.40 });
+
+
         }
 
         public string DishName
@@ -105,6 +107,11 @@ namespace MenuMaker_CaliburnMicro.ViewModels
         public void LoadDishView()
         {
             ActivateItemAsync(new DishViewModel(), System.Threading.CancellationToken.None);
+        }
+
+        public void LoadMenuView()
+        {
+            ActivateItemAsync(new MenuViewModel(), System.Threading.CancellationToken.None);
         }
     }
 }

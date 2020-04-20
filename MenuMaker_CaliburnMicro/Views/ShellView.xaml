@@ -31,8 +31,17 @@
         <Button x:Name="LoadDishView"
                 Grid.Row="1" Grid.Column="1"
                 FontSize="18"
-                Margin="0 0 0 10">
-            Näytä annokset
+                Margin="0 0 0 10"
+                Padding="5">
+            ANNOKSET
+        </Button>
+
+        <Button x:Name="LoadMenuView"
+                Grid.Row="1" Grid.Column="2"
+                FontSize="18"
+                Margin="0 0 0 10"
+                Padding="5">
+            RUOKALISTAT
         </Button>
         
         <!-- ALAIKKUNA -->
