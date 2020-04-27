@@ -54,12 +54,25 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
+        <!-- ROW 2 -->
         <TextBlock Grid.Row="2" Grid.Column="2"
                    Text="RUOKALISTAT"
                    FontSize="15"
                    Margin="0 0 0 10"
                    FontWeight="Bold"
                    Foreground="#F00"
+                   />
+        <!-- ROW 3 -->
+        <ComboBox x:Name="Ruokalistat" Grid.Row="3" Grid.Column="2"
+                  SelectedItem="{Binding Path=SelectedRuokalista, Mode=OneWayToSource}"
+                  DisplayMemberPath="MenuName"
+                  Width="150"/>
+        <!-- ROW 4 -->
+        <TextBlock Grid.Row="4" Grid.Column="2"
+                   x:Name="SelectedRuokalista_MenuName"
+                   Typography.Capitals="AllSmallCaps"
+                   FontSize="18"
+                   Padding="5"
                    />
 
     </Grid>

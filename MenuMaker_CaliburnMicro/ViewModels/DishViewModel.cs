@@ -8,7 +8,7 @@ namespace MenuMaker_CaliburnMicro.ViewModels
 {
     public class DishViewModel : ShellViewModel
     {
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void InsertDish_Click(object sender, RoutedEventArgs e)
         {
             //insertName.Clear();
         }
